@@ -1,8 +1,9 @@
 import scrapy 
+import pandas as pd 
 
 class FatecBot(scrapy.Spider):
     name = "Fatec Bot"
-    urls = ["https://www.alura.com.br/cursos-online-programacao", 
+    start_urls = ["https://www.alura.com.br/cursos-online-programacao", 
     "https://www.alura.com.br/cursos-online-front-end"]
 
     for url in start_urls:
@@ -28,8 +29,10 @@ class FatecBot(scrapy.Spider):
                 
                 cursos.append(curso)
             
+            print("=========================================")
             print("Quantidade de Cursos:", len(cursos))
+            print("=========================================")
 
         
-
+           
        
